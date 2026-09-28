@@ -60,6 +60,58 @@ public class Latihan {
             System.out.println(angka[i]);
         }
 
+        //=======================================================
+        // Latihan 4
+        System.out.println();
+        System.out.println("Latihan 4: Matriks 3x3");
+
+        int[][] matriks = new int[3][3];
+
+        System.out.println("Masukkan elemen matriks 3x3: ");
+
+        for (int baris = 0; baris < matriks.length; baris++) {
+            for (int kolom = 0; kolom < matriks[baris].length; kolom++) {
+                System.out.print("Matriks[" + baris + "][" + kolom + "]: ");
+
+                matriks[baris][kolom] = input.nextInt();
+            }
+        }
+
+        // Menampilkan matriks.
+        System.out.println("Matriks 3x3:");
+
+        for (int baris = 0; baris < matriks.length; baris++) {
+            for (int kolom = 0; kolom < matriks[baris].length; kolom++) {
+                System.out.print(matriks[baris][kolom] + "\t");
+            }
+            System.out.println();
+        }
+
+        // Menghitung jumlah setiap baris.
+        System.out.println("Jumlah setiap baris:");
+
+        for (int baris = 0; baris < matriks.length; baris++) {
+            int jumlahBaris = 0;
+
+            for (int kolom = 0; kolom < matriks[baris].length; kolom++) {
+                jumlahBaris += matriks[baris][kolom];
+            }
+
+            System.out.println("Baris " + (baris + 1) + " = " + jumlahBaris);
+        }
+
+        // Menghitung jumlah seluruh elemen matriks.
+        int totalMatriks = 0;
+
+        for (int baris = 0; baris < matriks.length; baris++) {
+            for (int kolom = 0; kolom < matriks[baris].length; kolom++) {
+                totalMatriks += matriks[baris][kolom];
+            }
+        }
+
+        System.out.println("Jumlah seluruh elemen = " + totalMatriks);
+
+
         input.close();
     }
 }
