@@ -111,6 +111,44 @@ public class Latihan {
 
         System.out.println("Jumlah seluruh elemen = " + totalMatriks);
 
+        //=======================================================
+        // Latihan 5
+        System.out.println();
+        System.out.println("Latihan 5: Nilai Terbesar Kedua");
+
+        System.out.print("Masukkan jumlah data: ");
+        int jumlahData = input.nextInt();
+
+        int[] nilai = new int[jumlahData];
+
+        System.out.println("Masukkan nilai:");
+
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print("Data ke-" + (i + 1) + ": ");
+            nilai[i] = input.nextInt();
+        }
+
+        // Mencari nilai terbesar
+        int nilaiTerbesar = nilai[0];
+
+        for (int i = 1; i < nilai.length; i++) {
+            if (nilai[i] > nilaiTerbesar) {
+                nilaiTerbesar = nilai[i];
+            }
+        }
+
+        // Mencari nilai terbesar kedua
+        int nilaiTerbesarKedua = Integer.MIN_VALUE;
+
+        for (int i = 0; i < nilai.length; i++) {
+            if (nilai[i] < nilaiTerbesar &&
+                    nilai[i] > nilaiTerbesarKedua) {
+                nilaiTerbesarKedua = nilai[i];
+            }
+        }
+
+        System.out.println("Nilai terbesar       : " + nilaiTerbesar);
+        System.out.println("Nilai terbesar kedua : " + nilaiTerbesarKedua);
 
         input.close();
     }
