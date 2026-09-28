@@ -150,6 +150,47 @@ public class Latihan {
         System.out.println("Nilai terbesar       : " + nilaiTerbesar);
         System.out.println("Nilai terbesar kedua : " + nilaiTerbesarKedua);
 
+        //=======================================================
+        // Latihan 6
+        System.out.println();
+        System.out.println("Latihan 6: Bubble Sort");
+
+        System.out.print("Masukkan jumlah data: ");
+        int jumlahSort = input.nextInt();
+
+        int[] dataSort = new int[jumlahSort];
+
+        System.out.println("Masukkan data: ");
+
+        for (int i = 0; i < dataSort.length; i++) {
+            System.out.print("Data ke-" + (i + 1) + ": ");
+            dataSort[i] = input.nextInt();
+        }
+        // Menampilkan array sebelum sorting.
+        System.out.println("\nArray sebelum sorting:");
+
+        for (int i = 0; i < dataSort.length; i++) {
+            System.out.print(dataSort[i] + " ");
+        }
+        // Mengurutkan array secara ascending menggunakan bubble sort.
+        for (int i = 0; i < dataSort.length - 1; i++) {
+            for (int j = 0; j < dataSort.length - 1 - i; j++) {
+
+                if (dataSort[j] > dataSort[j + 1]) {
+                    int sementara = dataSort[j];
+                    dataSort[j] = dataSort[j + 1];
+                    dataSort[j + 1] = sementara;
+                }
+            }
+        }
+        // Menampilkan array setelah sorting.
+        System.out.println("\n\nArray setelah sorting:");
+
+        for (int i = 0; i < dataSort.length; i++) {
+            System.out.print(dataSort[i] + " ");
+        }
+        System.out.println();
+
         input.close();
     }
 }
