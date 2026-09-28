@@ -42,6 +42,24 @@ public class Latihan {
             System.out.println();
         }
 
+        //=======================================================
+        // Latihan 3
+        System.out.println();
+        System.out.println("Latihan 3: Array Urutan Terbalik");
+        int[] angka = new int[10];
+
+        System.out.println("Masukkan bilangan: ");
+
+        for (int i = 0; i < angka.length; i++) {
+            System.out.print("Data ke-" + (i + 1) + ": ");
+            angka[i] = input.nextInt();
+        }
+        System.out.println("Diurutkan Terbalik:");
+
+        for (int i = angka.length - 1; i >= 0; i--) {
+            System.out.println(angka[i]);
+        }
+
         input.close();
     }
 }
