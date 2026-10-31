@@ -20,4 +20,12 @@ public class Mahasiswa {
     public double getIpk() {
         return ipk;
     }
+
+    public void setIpk(double ipk) {
+        if (ipk >= 0.0 && ipk <= 4.0) {
+            this.ipk = ipk;
+        } else {
+            System.out.println("IPK tidak valid, harus 0.0 - 4.4");
+        }
+    }
 }
