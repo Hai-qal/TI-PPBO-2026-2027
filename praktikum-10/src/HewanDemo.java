@@ -3,7 +3,8 @@ public class HewanDemo {
         Hewan[] daftar = {
                 new Kucing("Milo"),
                 new Bebek("Donal"),
-                new Elang("Garuda")
+                new Elang("Garuda"),
+                new Penguin("Poyoyo")
         };
 
         for (Hewan h : daftar) {

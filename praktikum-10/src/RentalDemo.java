@@ -3,10 +3,12 @@ public class RentalDemo {
         Kendaraan[] daftar = {
                 new Mobil("Avanza"),
                 new Motor("Trail KLX"),
-                new Mobil("Xenia")
+                new Mobil("Xenia"),
+                new Sepeda("Pacific"),
+                new Jeep("Wrangler")
         };
 
-        int hari = 3;
+        int hari = 5;
         double total = 0;
 
         for ( Kendaraan k : daftar ) {
@@ -17,6 +19,7 @@ public class RentalDemo {
             if (k instanceof BisaOffroad) {
                 ((BisaOffroad) k).jelajahOffroad();
             }
+            System.out.println();
         }
         System.out.println("Total sewa " + hari + " hari: " + total);
     }
